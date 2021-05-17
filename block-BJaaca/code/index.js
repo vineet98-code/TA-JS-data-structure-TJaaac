@@ -22,14 +22,45 @@ let character ={
 
 // - Add a new key `sur name` with the value of the surname of the character i.e "Stark". (Don't remove the space between `sur` and `name`)
 
+let character ={
+    characterName: "Arya",
+    "character-age": 20,
+    "sur name": stark,
+};
 
 // - Add a new key `title` with the value title of the character i.e "Lady of Winterfell"
+let character ={
+    characterName: "Arya",
+    "character-age": 20,
+    "sur name": stark,
+    title: "Lady of Winterfell",
+};
 
 // - Add another property named `greet` and value should be a function when called should alert `I am [NAME HERE] and my title is [TITLE HERE]`.
+let character ={
+    characterName: "Arya",
+    "character-age": 20,
+    "sur name": stark,
+    title: "Lady of Winterfell",
+    greet: function(){
+        alert(`I am ${characterName} and my title is ${title}`)
+    }
+};
 
 // - Add a new property to the character object named `isFemale` and value will be `true`
+let character ={
+    "characterName": "Arya",
+    "character-age": 20,
+    "sur name": "stark",
+    title: "Lady of Winterfell",
+    "greet": function(){
+        alert(`I am ${characterName} and my title is ${title}`)
+    },
+    isFemale: true
+};
 
 // - Execute the function stored in the greet key of the character object
+character.greet
 
 //  - Change the method `greet` to now alert `She is [NAME HERE] and her title is [TITLE HERE]`.
 
