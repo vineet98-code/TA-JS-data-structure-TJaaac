@@ -4,7 +4,7 @@ let numbers = [1,2,3,4,5];
 // 2. Calculate the sum of array items and print it to the console using console.log()
 for (i = 0; i < numbers.length; i++){
     var sum = sum + i;
-    console.log(numbers);
+    console.log(sum);
 }
 
 
