@@ -31,28 +31,41 @@ Use the variable named movies to solve the requirement below.
 */
 
 // 1. Log the value of the title key in the first movie of the array named `movies`
+console.log(movies[0].id);
 
 // 2. Log the value of the title key in the last movie of the array named `movies`
+console.log(movies[2].id);
 
 // 3. Log the value of the title key in the second movie (index 1) of the array named `movies`
+console.log(movies[1].id);
+
 
 // 4. Log the value of the year key in the first movie of the array named `movies`
+console.log(movies.year[0]);
 
 // 5. Log all the named of actors (key named actors) of the first movie
+console.log(movies[0].actors);
 
 // 6. Log the name of the first actor of the first movie
+console.log(movies[0].actors);
 
 // 7. Log the name of the last actor of the first movie
+console.log(movies[0].actors[2]);
 
 // 8. Log the name of the second actor (index 1) of the first movie
+console.log(movies[0].actors[1]);
 
 // 9. Log the name of the second actor (index 1) of the second movie
+console.log(movies[1].actors[1]);
 
 // 10. Log the name of the last actor of the thrid movie
+console.log(movies[2].actors[2]);
 
 // 11. Log the name of the second actor (index 1) of the third movie
+console.log(movies[2].actors[1]);
 
 // 12. Log all the genres of the third movie
+console.log(movies[2].genres());
 
 // 13. Log all the genres of the first movie
 
