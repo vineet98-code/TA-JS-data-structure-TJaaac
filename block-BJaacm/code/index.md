@@ -18,7 +18,8 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason - true - 
+- `user == newUser;` // output and reason - true - Whenever new object is created it is stored at different addresses. So the address of both variables will be different.
+
 - `user === newUser;`  //    - true 
 - `user.name === newUser.name;`  // - true
 - `user.name == newUser.name;`   // - true
