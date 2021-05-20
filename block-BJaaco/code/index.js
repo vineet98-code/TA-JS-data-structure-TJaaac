@@ -3,15 +3,40 @@ let numbers = [6, 8, 10, 12, 43, 56, 98];
 let userIds = [1230, 234, 1278, 984, 763, 900];
 
 // 1. Add all the values of numbers and userIds array into the new newly created array named `collection`
+let collection = numbers.concat(userIds);
+
+let collection = [6, 8, 10, 12, 43, 56, 98, 1230, 234, 1278, 984, 763, 900];
+let sum = 0;
+for (let value of collection){
+  sum = sum + value;
+}
+console.log(sum);
+
 
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
 
+let evenCollection = collection;
+let sum = 0;
+for (let value of evenCollection){
+    if(value % 2 == 0 ){
+      sum = sum  + value;
+    }
+}
+console.log(sum);
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
+let oddCollection = collection;
+let sum = 0;
+for (let value of evenCollection){
+    if(value % 2 !== 0 ){
+      sum = sum  + value;
+    }
+}
+console.log(sum);
 
 /*
   @param means parameter
 
- 4. Write a function named times which accets two parameter and return an array. 
+ 4. Write a function named times which accepts two parameter and return an array. 
 
   @param times (number)
   @param character (string)
@@ -23,10 +48,12 @@ let userIds = [1230, 234, 1278, 984, 763, 900];
     times(0); // []
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
-
-function times() {
-  // Your code
+let input = 0;
+function times(number, string) {
+  let result = input.repeat(times);
+  console.log(result);
 }
+times(5, 'c');
 
 // Uncomment the code below and test the output
 
@@ -48,9 +75,16 @@ function times() {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
-  // your code
+function revert(arr) {
+  // Create  an empty array
+  newArr = [];
+  // Loop through the array from the end to the beginning
+  for (let i = arr.length -1; i >= 0; i--){
+    newArr.push(arr[i])
+  }
+  return newArr;
 }
+console.log(revert([1, 2, 3, 4]));
 
 // Uncomment the code below and test the output
 // console.log(revert([1, 2, 3, 4])); // [4, 3, 2, 1]
@@ -71,7 +105,7 @@ function revert() {
 */
 
 function clear() {
-  // your code
+  
 }
 
 // Uncomment the code below and test the output
