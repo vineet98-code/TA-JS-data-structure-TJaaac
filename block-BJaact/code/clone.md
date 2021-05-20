@@ -47,7 +47,7 @@ console.log(person.address === personTwo.address); // output -  true
 console.log(person.address == personTwo.address); // output  - true
 console.log(personTwo.address.city); // output           -  San Jose
 console.log(person.address.city); // output              -  San Jose
-console.log(person.address.city == personTwo.address.city); // output
+console.log(person.address.city == personTwo.address.city); // output  - true
 ```
 
 3. Write the output with reason:
@@ -69,14 +69,14 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
+console.log(personTwo.firstName); // output - John
+console.log(person.firstName); // output - Arya
+console.log(personTwo.lastName); // output  - Doe
+console.log(person.firstName === personTwo.firstName); // output - false 
+console.log(person == personTwo); // output   -  false
+console.log(person === personTwo); // output  -  false 
+console.log(person.address === personTwo.address); // output - false  
+console.log(person.address == personTwo.address); // output  - false 
 console.log(personTwo.address.city); // output
 console.log(person.address.city); // output
 console.log(person.address.city == personTwo.address.city); // output
@@ -103,7 +103,8 @@ let blogs = [
   },
 ];
 
-// Your code goes here
+// let clonedBlogs = {...blogs};
+
 ```
 
 5. Clone the `question` variable into a new variable named `questionClone`
