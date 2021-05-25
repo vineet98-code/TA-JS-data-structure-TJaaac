@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output - Arya - call by reference
+console.log(person2.firstName); // output - Arya - copy by reference
 console.log(person.firstName); // output  - Arya
-console.log(person.lastName); // output   -  Doe
-console.log(person == person2); // output -  true
-console.log(person === person2); // output - true
-console.log(person.lastName === person2.lastName); // output  - true 
+console.log(person.lastName); // output   -  Doe  
+console.log(person == person2); // output -  true  -copy by reference
+console.log(person === person2); // output - true  -copy by reference
+console.log(person.lastName === person2.lastName); // output  - true  - copy by reference
 ```
 
 2. Write the output with reason:
@@ -40,13 +40,13 @@ person.city = 'Navada';
 console.log(personTwo.firstName); // output - john
 console.log(person.firstName); // output  -  Arya 
 console.log(personTwo.lastName); // output  - Doe
-console.log(person.firstName === personTwo.firstName); // output  - false  - Different reference value  
-console.log(person == personTwo); // output  - false - cloning all value, Different reference value  
-console.log(person === personTwo); // output  -  false - cloning all value,  Different reference value
+console.log(person.firstName === personTwo.firstName); // output  - false  - because they share diffrent address  
+console.log(person == personTwo); // output  - false - cloning all value, because they share diffrent address    
+console.log(person === personTwo); // output  -  false - cloning all value,  because they share diffrent address  
 console.log(person.address === personTwo.address); // output -  true  
 console.log(person.address == personTwo.address); // output  - true
-console.log(personTwo.address.city); // output           -  San Jose
-console.log(person.address.city); // output              -  San Jose
+console.log(personTwo.address.city); // output           -  Navada
+console.log(person.address.city); // output              -  Navada 
 console.log(person.address.city == personTwo.address.city); // output  - true
 ```
 
@@ -77,9 +77,9 @@ console.log(person == personTwo); // output   -  false
 console.log(person === personTwo); // output  -  false 
 console.log(person.address === personTwo.address); // output - false  
 console.log(person.address == personTwo.address); // output  - false 
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.address.city); // output  - Navada  
+console.log(person.address.city); // output     - Navada   
+console.log(person.address.city == personTwo.address.city); // output  - true 
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -129,7 +129,7 @@ var questions = [
   },
 ];
 
-// Your code goes here
+// let questionClone = {...question};
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -156,7 +156,7 @@ var allBlogs = {
   ],
 };
 
-// Your code goes here
+// let allBlogsClone = {...allBlogs};
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -189,7 +189,7 @@ let person = [
   },
 ];
 
-// Your code goes here
+// let clonedPerson = {...person};
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
@@ -232,3 +232,14 @@ console.log(
   }`
 );
 ```
+
+cloned = {...obj, family: {...obj.family, numbers: [...obj.family.numbers]}, brothers: [...obj.brothers]}
+let obj = {
+   name: "jon",
+   suraName: "snow",
+   family: {
+      name: "Arya",
+      numbers: [1,2,3,4,5]
+   },
+   brothers: [ 'bran', 'robb' ]
+}
