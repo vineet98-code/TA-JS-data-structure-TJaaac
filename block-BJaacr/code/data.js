@@ -8,36 +8,43 @@ const got = {
           description:
             "Lord of Winterfell - Warden of the North - Hand of the King - Married to Catelyn (Tully) Stark",
         },
+
         {
           name: "Benjen Stark",
           description:
             "Brother of Eddard Stark - First ranger of the Night's Watch",
         },
+
         {
           name: "Robb Stark",
           description:
             "Son of Eddard and Catelyn Stark - Direwolf: Grey Wind",
         },
+
         {
           name: "Sansa Stark",
           description:
             "Daughter of Eddard and Catelyn Stark - Direwolf: Lady",
         },
+
         {
           name: "Arya Stark",
           description:
             "Daughter of Eddard and Catelyn Stark - Direwolf: Nymeria",
         },
+
         {
           name: "Brandon Stark",
           description:
             "Son of Eddard and Catelyn Stark - Direwolf: Summer",
         },
+
         {
           name: "Rickon Stark Upper",
           description:
             "Son of Eddard and Catelyn Stark - Direwolf: Shaggydog",
         },
+        
         {
           name: "Jon Snow",
           description:
@@ -45,6 +52,7 @@ const got = {
         },
       ],
     },
+
     {
       name: "Lannisters",
       people: [
