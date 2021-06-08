@@ -12,14 +12,14 @@ let arr2 = arr;
 Answer the following with reason after going through the above code:
 
 - `[10] === [10]`
-- What is the value of obj? // answer
-- `obj == newObj`  //  false
-- `obj === newObj` // false
-- `user === newObj` // false
-- `user == newObj` //  false
-- `user == obj`    //  true
-- `arr == arr2`    // true 
-- `arr === arr2`   // true
+- What is the value of obj? // answer { surname: 'Stark' }
+- `obj == newObj`  //  false - Two Diffrent address 
+- `obj === newObj` // false  - Two Diffrent address 
+- `user === newObj` // false  - Two Diffrent address 
+- `user == newObj` //  false  - Two Diffrent address
+- `user == obj`    //  true   - Copy by reference 
+- `arr == arr2`    // true    - Copy by reference 
+- `arr === arr2`   // true    - Copy by reference 
 
 2. What's will be the value of `person1` and `person2` ? Explain with reason. Draw the memory representation diagram.
 
@@ -33,7 +33,7 @@ function personDetails(person) {
 }
 var person1 = { name: 'Alex', age: 30 };
 var person2 = personDetails(person1);
-console.log(person1);
+console.log(person1); - 
 console.log(person2);
 ```
 
@@ -46,6 +46,6 @@ var user = {
 };
 user.brothers = brothers;
 brothers.push('Robb');
-console.log(user.brothers === brothers); //1. output - true
-console.log(user.brothers.length === brothers.length); //2. output - true
+console.log(user.brothers === brothers); //1. output - true -Address is same   
+console.log(user.brothers.length === brothers.length); //2. output - true  - 
 ```
