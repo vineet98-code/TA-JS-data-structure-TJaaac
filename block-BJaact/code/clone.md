@@ -103,7 +103,8 @@ let blogs = [
   },
 ];
 
-// let clonedBlogs = {...blogs};
+clonedBlogs = [ 
+               {...blogs[0]}, {...blogs[1]}, {...blogs[2]}];
 
 ```
 
@@ -129,12 +130,16 @@ var questions = [
   },
 ];
 
-// let questionClone = {...question};
+questionClone = [
+              {...questions[0], responses:[...questions[0].responses]}, {...questions[1], 
+              responses:[...questions[0].responses] }];
+             
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
 
 ```js
+
 var allBlogs = {
   id: 1,
   title: 'Alamofire JSON Serialization',
@@ -156,7 +161,10 @@ var allBlogs = {
   ],
 };
 
-// let allBlogsClone = {...allBlogs};
+allBlogsClone = 
+  {...allBlogs, author: {...allBlogs.author}, comments:[ {...allBlogs.comments[0]},
+                       {...allBlogs.comments[1]}]};
+                       
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -189,7 +197,8 @@ let person = [
   },
 ];
 
-// let clonedPerson = {...person};
+clonedPerson = [ 
+                {...person[0], input: {...person[0].input}, output:{...person[0].output}},                      {...person[1], input: {...person[1].input, name:{...person[1].input.name}}, output:                                   {...person[1].output}},                                                                 {...person[2], input:{...person[2].input}, output:{...person[2]}}, {...person[3], input:   {...person[3].input, name:{...person[3].input.name}, birthday:{...person[3].birthday}}, output:{...person[3].output}}];
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
@@ -233,7 +242,7 @@ console.log(
 );
 ```
 
-cloned = {...obj, family: {...obj.family, numbers: [...obj.family.numbers]}, brothers: [...obj.brothers]}
+let cloned = {...obj, family: {...obj.family, numbers: [...obj.family.numbers]}, brothers: [...obj.brothers]}
 let obj = {
    name: "jon",
    suraName: "snow",
