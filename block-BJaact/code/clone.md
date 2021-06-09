@@ -197,15 +197,17 @@ let person = [
   },
 ];
 
-clonedPerson = [ 
+let clonedPerson = [ 
                 {...person[0], input: {...person[0].input}, output:{...person[0].output}},                      {...person[1], input: {...person[1].input, name:{...person[1].input.name}}, output:                                   {...person[1].output}},                                                                 {...person[2], input:{...person[2].input}, output:{...person[2]}}, {...person[3], input:   {...person[3].input, name:{...person[3].input.name}, birthday:{...person[3].birthday}}, output:{...person[3].output}}];
+
+let clonedPerson = JSON.parse(JSON.stringify(person));                
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
-  // your code
+function cloneObject(obj) {
+  return JSON.parse(JSON.stringify(obj));
 }
 
 // Run the test below to check your function
@@ -215,7 +217,8 @@ let user = {
   house: 'Stark',
   sisters: ['Arya', 'Sansa'],
 };
-let cloned = cloneObject(user);
+
+cloneObject(user);
 
 let person = {
   firstName: 'John',
@@ -228,7 +231,7 @@ let person = {
   },
 };
 
-let clonedPerson = cloneObject(user);
+cloneObject(person);
 
 console.log(
   `The user object is ${
